@@ -12,3 +12,4 @@ C:\Users\priya\projects\async\obj\Debug\net10.0\refint\async.dll
 C:\Users\priya\projects\async\obj\Debug\net10.0\async.pdb
 C:\Users\priya\projects\async\obj\Debug\net10.0\async.genruntimeconfig.cache
 C:\Users\priya\projects\async\obj\Debug\net10.0\ref\async.dll
+C:\Users\priya\projects\async\obj\Debug\net10.0\async.sourcelink.json
