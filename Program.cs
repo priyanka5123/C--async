@@ -7,7 +7,16 @@ public class Product
     {
         Name = name;
     }
-}public class Program
+}
+public class Review
+{
+    public string Content { get; set; }
+    public Review(string content)
+    {
+        Content = content;
+    }
+}
+public class Program
 {
 	public async Task DownloadDataAsync()
     {
@@ -40,12 +49,31 @@ public class Product
             new Product("Reusable Straw")
         };
     }
+
+    public async Task<List<Review>> FetchReviewsAsync()
+    {
+        await Task.Delay(3000);
+        return new List<Review>
+        {
+            new Review("Great product!"),
+            new Review("Good value for the money."),
+        };
+
+    }
      public async Task DisplayProductsAsync()
     {
         List<Product> products = await FetchProductsAsync();
+        List<Review> reviews = await FetchReviewsAsync();
+        Console.WriteLine("Products:");
         foreach (Product product in products)
         {
             Console.WriteLine(product.Name);
+        }
+        // Display fetched reviews
+        Console.WriteLine("\nReviews:");
+        foreach (Review review in reviews)
+        {
+            Console.WriteLine(review.Content);
         }
     }
     public static async Task Main(string[] args)
